@@ -313,6 +313,28 @@ tests/
 | M3 | **World 2 + progression** | Sand, water and hazard return. All 4 Beach holes. Level-select map, save/unlock, roll loop per surface. |
 | M4 | **Polish + ship prep** | Final art and sound pass, decor critters, collectibles, parental gate, app icons. Tested on a real iPad via TestFlight. Store listings (Kids / Families). |
 
+### Where we are (2026-11-26)
+
+**Done:**
+- M0 scaffold: sim, slingshot, grab variants, 1P/2P, latency test mode
+- picslide look and sound, playtested on desktop and approved
+- M2 level pipeline and Meadow holes 1–4, playtested and approved ("no notes")
+- Repo: github.com/networkburger/loadsagolf, committing straight to `main` until v1
+
+**Next up, in order:**
+1. **M3 Beach world:** 4 holes (sand patch · water to cross · sand + water · a mix of everything), built from the mechanics in `levels/_sandbox.tscn`. Then the level-select map, save/unlock (`user://` JSON) and the world-unlock celebration.
+2. **M2 remainder, CI:** GitHub Actions builds the Android APK on push, and iOS (macOS runner → TestFlight). Needs an Apple Developer account and App Store Connect API key from the user, and possibly one short borrowed-Mac session for signing.
+3. **M0 remainder, on the tablet** (when it's free):
+   - `sudo pacman -S android-udev`, then `tools/deploy-android.sh`
+   - measure touch-to-sound latency (latency mode)
+   - pick the grab variant ⚗️
+   - check the sounds on its speakers
+   - confirm the model with `adb shell getprop ro.product.model`
+
+**Loose ends:**
+- No app icon yet (the Android export warns).
+- Decor (flowers, critters) is planned for M4.
+
 **Playtest with kids from M1 onward.** A 5-year-old's behaviour will reshape the controls faster than any amount of thinking will.
 
 ## 11. Decisions log
