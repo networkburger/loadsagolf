@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://core/level/level.gd" id="level"]
+[ext_resource type="Script" path="res://core/level/tee.gd" id="tee"]
+[ext_resource type="Script" path="res://core/level/hole.gd" id="hole"]
+[ext_resource type="Script" path="res://core/level/wall.gd" id="wall"]
+[ext_resource type="Script" path="res://core/level/bumper.gd" id="bumper"]
+[ext_resource type="Script" path="res://core/level/zone.gd" id="zone"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("level")
+id = "meadow-04"
+board_rect = Rect2(64, 64, 896, 640)
+
+[node name="Tee" type="Node2D" parent="."]
+position = Vector2(180, 384)
+script = ExtResource("tee")
+
+[node name="Hole" type="Node2D" parent="."]
+position = Vector2(840, 384)
+script = ExtResource("hole")
+
+[node name="BumperMid" type="Node2D" parent="."]
+position = Vector2(520, 384)
+script = ExtResource("bumper")
+radius = 30.0
+
+[node name="BumperUp" type="Node2D" parent="."]
+position = Vector2(430, 240)
+script = ExtResource("bumper")
+radius = 24.0
+
+[node name="BumperDown" type="Node2D" parent="."]
+position = Vector2(430, 528)
+script = ExtResource("bumper")
+radius = 24.0
+
+[node name="BumperUpRight" type="Node2D" parent="."]
+position = Vector2(680, 290)
+script = ExtResource("bumper")
+radius = 22.0
+
+[node name="BumperDownRight" type="Node2D" parent="."]
+position = Vector2(680, 478)
+script = ExtResource("bumper")
+radius = 22.0

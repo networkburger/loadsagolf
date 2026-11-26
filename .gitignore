@@ -1,0 +1,11 @@
+# Godot
+.godot/
+/android/
+*.translation
+# builds
+/build/
+# python
+__pycache__/
+.venv/
+# sfx contact sheet (regenerated)
+/tools/sfx/out/

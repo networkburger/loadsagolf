@@ -1,0 +1,47 @@
+; Engine configuration file.
+config_version=5
+
+[application]
+
+config/name="loadsagolf"
+run/main_scene="res://scenes/game.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+
+[audio]
+
+driver/output_latency=15
+general/ios/session_category=3
+general/ios/mix_with_others=true
+
+[autoload]
+
+Sfx="*res://autoload/sfx.gd"
+Haptics="*res://autoload/haptics.gd"
+Game="*res://autoload/game.gd"
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=768
+window/size/window_width_override=1280
+window/size/window_height_override=800
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=4
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[physics]
+
+common/physics_ticks_per_second=60
+common/physics_interpolation=true
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(1, 0.957, 0.902, 1)
+anti_aliasing/quality/msaa_2d=1

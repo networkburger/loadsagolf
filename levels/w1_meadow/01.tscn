@@ -1,0 +1,22 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://core/level/level.gd" id="level"]
+[ext_resource type="Script" path="res://core/level/tee.gd" id="tee"]
+[ext_resource type="Script" path="res://core/level/hole.gd" id="hole"]
+[ext_resource type="Script" path="res://core/level/wall.gd" id="wall"]
+[ext_resource type="Script" path="res://core/level/bumper.gd" id="bumper"]
+[ext_resource type="Script" path="res://core/level/zone.gd" id="zone"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("level")
+id = "meadow-01"
+board_rect = Rect2(112, 224, 800, 320)
+
+[node name="Tee" type="Node2D" parent="."]
+position = Vector2(230, 384)
+script = ExtResource("tee")
+
+[node name="Hole" type="Node2D" parent="."]
+position = Vector2(790, 384)
+script = ExtResource("hole")
+

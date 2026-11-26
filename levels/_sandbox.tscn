@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://core/level/level.gd" id="level"]
+[ext_resource type="Script" path="res://core/level/tee.gd" id="tee"]
+[ext_resource type="Script" path="res://core/level/hole.gd" id="hole"]
+[ext_resource type="Script" path="res://core/level/wall.gd" id="wall"]
+[ext_resource type="Script" path="res://core/level/bumper.gd" id="bumper"]
+[ext_resource type="Script" path="res://core/level/zone.gd" id="zone"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("level")
+id = "sandbox"
+board_rect = Rect2(24, 24, 976, 720)
+
+[node name="Tee" type="Node2D" parent="."]
+position = Vector2(140, 600)
+script = ExtResource("tee")
+
+[node name="Hole" type="Node2D" parent="."]
+position = Vector2(880, 610)
+script = ExtResource("hole")
+
+[node name="WallLeft" type="Line2D" parent="."]
+script = ExtResource("wall")
+points = PackedVector2Array(380, 48, 380, 420)
+
+[node name="WallRight" type="Line2D" parent="."]
+script = ExtResource("wall")
+points = PackedVector2Array(640, 350, 640, 720)
+
+[node name="Ledge" type="Line2D" parent="."]
+script = ExtResource("wall")
+points = PackedVector2Array(760, 470, 840, 470)
+
+[node name="Bumper" type="Node2D" parent="."]
+position = Vector2(510, 200)
+script = ExtResource("bumper")
+radius = 28.0
+
+[node name="Sand" type="Node2D" parent="."]
+position = Vector2(790, 165)
+script = ExtResource("zone")
+surface = 0
+size = Vector2(220, 170)
+
+[node name="Pond" type="Node2D" parent="."]
+position = Vector2(510, 600)
+script = ExtResource("zone")
+surface = 1
+size = Vector2(160, 120)
